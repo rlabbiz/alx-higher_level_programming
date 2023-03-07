@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-def uppercase(c):
-    n = ord(c)
-    if n >= ord("A") and n <= ord("Z"):
-        return True
-    else:
-        return False
+def uppercase(str):
+    for i in range(0, len(str)):
+        n = ord(str[i])
+        if n >= ord("a") and n <= ord("z"):
+            n -= 32
+        print(chr(n), end="")
+    print("")
